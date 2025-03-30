@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styling */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.logo{
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+}
+.header-content{
+    flex: 1;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #8fc110;
+}
+
+/* Centered About Section */
+#about {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 800px;
+    background-color: #05b4fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Donation Form Styling */
+.donation-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.donation-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.donation-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.donation-form button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styling */
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5) invert(0.9); /* Brighter effect on hover */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .social-media img {
+        height: 25px;
+        width: 25px;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div class ="header-content">
+        <h1>Welcome to Food Wastage Management System</h1>
+        <nav>
+            <a href="index1.html">Home</a>
+            <a href="donate.html">Donate Food</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">About Us</h2>
+            <p style="color: rgb(243, 10, 33);">We aim to reduce food wastage by connecting donors to those in need.</p>
+    </header>
+
+    <!-- Donation Form -->
+    <main>
+        <form action="/donate-food" method="POST" class="donation-form">
+            <h3>Food Donation Form</h3>
+            
+            <!-- Serial Numbering -->
+            <label for="foodName">1. Food Name:</label>
+            <input type="text" id="foodName" name="foodName" placeholder="Enter the food name" required>
+
+            <label for="quantity">2. Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter the quantity (in kg)" required>
+
+            <label for="expiryDate">3. Expiry Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" required>
+
+            <label for="location">4. Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your address/location" required>
+
+            <button type="submit">Submit Donation</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="#" target="_blank" title="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" title="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" title="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#" target="_blank" title="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+    
+        <p>&copy; 2025 Food Wastage Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
